@@ -33,7 +33,7 @@ export default function Input() {
       <img
         alt="..."
         className="path"
-        src={require("../assets/img/path4.png")}
+        src={require("../assets/img/path1.png")}
       />
       <div className="d-flex justify-content-center">
         <div className="content-center brand ">

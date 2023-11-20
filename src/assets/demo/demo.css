@@ -532,7 +532,7 @@
 }
 
 .pp {
-  background-color: #38e54d;
+  background-color: #2ca73a;
   color: white;
 }
 
@@ -572,4 +572,20 @@
 }
 .bti {
   margin-bottom: 100px;
+}
+
+.Nomor {
+  width: 230px;
+  height: 200px;
+  background-color: #2ca73a;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  border-radius: 30px;
+  font-size: 50px;
+}
+
+.pr {
+  background-color: rgb(229, 68, 54);
+  color: #ffffff;
 }

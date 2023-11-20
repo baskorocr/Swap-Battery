@@ -13,6 +13,7 @@ import Index from "./componen/index";
 import InputBattery from "./componen/inputBattery";
 import Verifikasi from "./componen/verifikasi";
 import Failed from "./componen/failed";
+import Success from "./componen/success";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,6 +23,7 @@ root.render(
       <Route path="/input" element={<InputBattery />} />
       <Route path="/verifikasi" element={<Verifikasi />} />
       <Route path="/failed" element={<Failed />} />
+      <Route path="/success" element={<Success />} />
       {/* <Route path="/landing-page" element={<LandingPage />} /> */}
     </Routes>
   </BrowserRouter>
