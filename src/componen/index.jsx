@@ -15,16 +15,38 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, { useState } from "react";
 import Footer from "./footer";
 import { useNavigate } from "react-router-dom";
+import database from "../config/firebase";
+import { ref, get } from "firebase/database";
 
 // reactstrap components
 import { Container } from "reactstrap";
 
 export default function PageHeader() {
+  const [data, setData] = useState(null);
+
   const navigate = useNavigate();
+
   React.useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Replace 'your-firebase-path' with the actual path in your database
+        const snapshot = await get(ref(database, "id"));
+        if (snapshot.exists()) {
+          console.log(snapshot.val());
+          setData(snapshot.val());
+        } else {
+          console.log("No data available");
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error.message);
+      }
+    };
+
+    fetchData();
+
     document.body.classList.toggle("index-page");
     // Specify how to clean up after this effect:
     return function cleanup() {
